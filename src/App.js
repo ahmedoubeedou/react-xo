@@ -58,7 +58,7 @@ function Isdisable()
     </div>
     </div>
     <div>
-        <button  onClick={Aller} className={Coler} disabled={isDisable}>GO</button>
+        <button  onClick={Aller} className={Coler} disabled={isDisable}>START GAME</button>
     </div>
     </div>
     {Change?<Options player1={resultecontext.player1} player2={resultecontext.player2}/>:""}
