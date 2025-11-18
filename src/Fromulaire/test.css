@@ -9,6 +9,32 @@
   justify-content: center;
   align-items: center;
 }
+.message-playerV{
+    color:green;
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: absolute;
+    font-weight: bolder;
+    top:9%;
+}
+.message-playerVN{
+display: none;
+}
+.message-player{
+    color:red;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    top:9%;
+    letter-spacing: 0.5px;
+}
+.message-player-display{
+    display: none;
+}
+input::placeholder{
+    color:white;
+    font-size: 16px;
+}
 .parent{
     width:90%;
     display: flex;
@@ -44,7 +70,7 @@
 .message-erurre-background{
     background-color: white;
     color:black;
-    padding: 40px;
+    padding: 20px;
     border-radius: 20px;
    
 }
@@ -103,7 +129,7 @@ button{
     font-size: 20px;
     cursor: pointer;
     transition: 0.5s;
-
+    margin-top: 5px;
     
 }
 .isdaisblefalse{
@@ -140,11 +166,7 @@ button{
     align-items: center;
     border-radius: 10px;
     justify-content: center;
-    margin:auto;
-}
-.titre-head p{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
 }
 .champs{
     width:90%;
@@ -158,7 +180,7 @@ button{
     
 }
 .input-champ{
- width: 80px;   
+    width: 80px;   
     height: 50px;
     padding: 4px 10px;
     font-size: 50px;
@@ -176,13 +198,16 @@ button{
     justify-content: space-around;
     width: 75%;
     height: 20px;
+  
     position: absolute;
     top:45%;
     
     left: 13%;
 
 }
-
+.titre-head p{
+    font-size: 20px;
+}
 .p-y{
     height: 230px;
     width: 5px;
@@ -214,22 +239,23 @@ button{
     top:10%;
 }
 .container{
-   display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     color:black;
     background-color: rgba(255, 255, 255, 0.847);
-    height: 530px;
+    height: 550px;
     gap:9px;
     width: 400px;
     overflow: hidden;
     border-radius: 30px;
     padding: 10px 0px;
     position: relative;
-
+    
 }
+
 h2{
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 .score{
    min-width:50px;
@@ -268,13 +294,19 @@ input{
  .responsive-contenu{
         font-size: 14px;
     }
+   
 @media (max-width:500px)
 {
     .responsive-contenu{
         font-size: 14px;
     }
     .container{
-        width:98%;
+        width:450px;
+    
+    }
+    .champs{
+        width: 80%;
+        margin: auto;
     }
     .flexs{
         width:368px;
@@ -284,4 +316,336 @@ input{
     .input-champ{
         border:none;
     }
+    .message-player{
+    color:red;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    top:7%;
+}
+}*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.flexs{
+     display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message-playerV{
+    color:green;
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: absolute;
+    font-weight: bolder;
+    top:9%;
+}
+.message-playerVN{
+display: none;
+}
+.message-player{
+    color:red;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    top:9%;
+    letter-spacing: 0.5px;
+}
+.message-player-display{
+    display: none;
+}
+input::placeholder{
+    color:white;
+    font-size: 16px;
+}
+.parent{
+    width:90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.div-inputs-label{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+
+.body-xo{
+    width: 10px;
+    height: 200px;
+     
+}
+.p-xo{
+    height: 200px;
+    width: 8px;
+    background-color: #123;
+}
+.message-erure{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.457);
+    display: flex;
+    justify-content: center;
+   top:0%;
+    align-items: center;
+}
+.message-erurre-background{
+    background-color: white;
+    color:black;
+    padding: 20px;
+    border-radius: 20px;
+   
+}
+label{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.nameplayer{
+    font-size: 18px;
+  background-color: #123;
+    border-radius: 10px;
+    padding: 3px 10px;
+    min-width:80px;
+    height: 50px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #123;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.input-player{
+    width:160px;
+    height: 40px;
+    font-size: 20px;
+    border:none;
+    background-color: #123;
+    outline: none;
+    color:white;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 2px 10px;
+
+}
+button{
+    
+    color:white;
+    text-align: center;
+    border-radius: 10px;
+    width:200px;
+    height: 40px;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 5px;
+    
+}
+.isdaisblefalse{
+    background-color:rgb(128, 128, 128);
+}
+.isdaisbletrue{
+    background-color: brown;
+}
+.Go:hover{
+    /* transform: scale(1.05); */
+}
+.p-xop{
+    height: 8px;
+    width: 300px;
+    background-color: #123;
+    position: absolute;
+    
+    top:30%;
+}
+.p-xop1{
+    height: 8px;
+    width: 300px;
+    background-color: #123;
+    position: absolute;
+   
+    top:70%;
+}
+.titre-head{
+    background-color: white;
+    width: 95%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin: auto;
+}
+.champs{
+    width:90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border:none;
+    border-bottom: red solid 7px;
+    margin: auto;
+    
+}
+.input-champ{
+    width: 80px;   
+    height: 50px;
+    padding: 4px 10px;
+    font-size: 50px;
+    border:none;
+    /* border:rgb(45, 45, 161) solid 3px; */
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.div-y{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    height: 20px;
+  
+    position: absolute;
+    top:45%;
+    
+    left: 13%;
+
+}
+.titre-head p{
+    font-size: 20px;
+}
+.p-y{
+    height: 230px;
+    width: 5px;
+    background-color: red;
+}
+.container-champs{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap:10px;
+    padding: 10px;
+    padding-top: 50px;
+    height: 300px;
+    width: 400px;
+    padding-bottom: 80px;
+    border-radius: 10px;
+    background:white;
+}
+.parent-score{
+    width: 73%;
+/* outline: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:10%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    background-color: rgba(255, 255, 255, 0.847);
+    height: 550px;
+    gap:9px;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 10px 0px;
+    position: relative;
+    
+}
+
+h2{
+    margin-bottom: 50px;
+}
+.score{
+   min-width:50px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    padding: 5px;
+}
+hr{
+    width: 90%;
+}
+input{
+    width:140px;
+    height: 23px;
+}
+.input{
+    width:97%;
+    height: 30px;
+    border:none;
+    outline: none;
+    padding: 2px 10px;
+    font-size: 17px;
+    border-radius: 6px;
+    
+}
+.p1{
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    height: 2px;
+}
+ .responsive-contenu{
+        font-size: 14px;
+    }
+   
+@media (max-width:500px)
+{
+    .responsive-contenu{
+        font-size: 14px;
+    }
+    .container{
+        width:450px;
+    
+    }
+    .champs{
+        width: 80%;
+        margin: auto;
+    }
+    .flexs{
+        width:368px;
+        margin: auto;
+        padding: 10px;
+    }
+    .input-champ{
+        border:none;
+    }
+    .message-player{
+    color:red;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    top:7%;
+}
 }
