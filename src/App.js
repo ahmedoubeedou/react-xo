@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {myContext} from "./Fromulaire/creatContexts.js"
 import "./Fromulaire/test.css"
@@ -8,6 +7,9 @@ import { useContext, useState } from 'react';
 function App() {
 const[Change,setChange] = useState(false);
 const[Coler,setColor] = useState("isdaisblefalse");
+const[ classP,setclassP] = useState("message-player");
+const[ classPV,setclassPV] = useState("message-playerVN");
+
 const resultecontext=useContext(myContext);
 
 const [InputValue,setInputValue] = useState({player1:"",player2:"",counter:"VS"})
@@ -15,19 +17,28 @@ const [isDisable,setIsDisable] = useState(true);
 function Aller()
 {
   setChange(true);
+  setclassPV("message-playerVN");
 }
 
 function Isdisable()
 {
   if(InputValue.player1.length>=2 &&  InputValue.player2.length>=2)
   {
-    setIsDisable(false);
-    setColor("isdaisbletrue")
+    
+    setIsDisable(false); 
+    setColor("isdaisbletrue");
+    setclassP("message-player-display");
+    setclassPV("message-playerV")
   }
   else{
     setIsDisable(true);
    setColor("isdaisblefalse")
+   setclassP("message-player");
+    setclassPV("message-playerVN")
+
+   
   }
+     
 }
   return (
          <myContext.Provider value={{player1:InputValue.player1,player2:InputValue.player2}}>
@@ -42,10 +53,10 @@ function Isdisable()
     </div>
     <div  className="container-dsiplay" style={Change?{display:"none"}:{display:"flex"}}>
     <div>
-        <label>Player 1</label><input className="input-player" value={InputValue.player1} onKeyUp={Isdisable} onChange={(e)=>{setInputValue({...InputValue,player1:e.target.value})}}/>
+        <label>Player 1</label><input placeholder="Nom de Player1" className="input-player" value={InputValue.player1} onKeyUp={Isdisable} onChange={(e)=>{setInputValue({...InputValue,player1:e.target.value})}}/>
     </div>
     <div>
-        <label>Player 2</label><input className="input-player" value={InputValue.player2} onKeyUp={Isdisable} onChange={(e)=>{setInputValue({...InputValue,player2:e.target.value})}}/>
+        <label>Player 2</label><input placeholder="Nom de Player1" className="input-player" value={InputValue.player2} onKeyUp={Isdisable} onChange={(e)=>{setInputValue({...InputValue,player2:e.target.value})}}/>
     </div>
     <div style={{display:"flex",position:"relative",marginLeft:"0px",marginTop:"20px",width:"320px",justifyContent:"space-around"}}>
           <p className="p-xop"></p>
@@ -57,11 +68,15 @@ function Isdisable()
         <p className="p-xo"></p>
     </div>
     </div>
-    <div>
+
+    <div className="div-bottom" >
         <button  onClick={Aller} className={Coler} disabled={isDisable}>START GAME</button>
     </div>
     </div>
     {Change?<Options player1={resultecontext.player1} player2={resultecontext.player2}/>:""}
+    <p className={classP}>Veuillez saisir au moins deux craracteres<br/>pour chaque joueur afin d'etre diriger vers le jeux</p>
+    <p className={classPV}>Tout est pret ! Lancez la partie !</p>
+    
         </div>
 </div>
     </myContext.Provider>
