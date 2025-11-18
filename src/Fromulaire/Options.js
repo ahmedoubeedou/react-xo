@@ -90,7 +90,7 @@ ajouerScore();
    }
    
     return(
-        <div className="flexs" style={{flexDirection:"column",gap:"7px"}}>
+        <div className="flexs" style={{flexDirection:"column",gap:"7px",padding:"0px 10px"}}>
      <div className="parent-score"> 
       <p className="score">Score : {" "+scores.scorePlayer1}</p>
       <p className="score">Score :{" "+scores.scorePlayer2}</p>
