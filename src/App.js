@@ -61,7 +61,7 @@ function Isdisable()
         <button  onClick={Aller} className={Coler} disabled={isDisable}>GO</button>
     </div>
     </div>
-    {Change?<Options player1={resultecontext.player1} player2={resultecontext.player2}/>:""};
+    {Change?<Options player1={resultecontext.player1} player2={resultecontext.player2}/>:""}
         </div>
 </div>
     </myContext.Provider>
