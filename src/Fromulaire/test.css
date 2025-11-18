@@ -266,12 +266,12 @@ input{
     height: 2px;
 }
  .responsive-contenu{
-        font-size: 18px;
+        font-size: 14px;
     }
 @media (max-width:500px)
 {
     .responsive-contenu{
-        font-size: 18px;
+        font-size: 14px;
     }
     .container{
         width:98%;
@@ -284,17 +284,4 @@ input{
     .input-champ{
         border:none;
     }
-}
-@media (max-width:1000px)
-{
-    .inpu{
-        width:100px;
-    }
-    h1{
-        font-size: 16px;
-    }
-    
-}
-.sped{
-    background-color: rgba(128, 128, 128, 0.667) !important;
 }
